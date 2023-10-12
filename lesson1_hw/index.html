@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="make-order">
+            <div class="goods">
+                <h1 class="heading">Меню:</h1>
+                <ul id="menu" class="menu">
+                    <li>Пицца "Маргарита"<button data-id='Пицца "Маргарита"' class="good-choose">Выбрать</button></li>
+                    <li>Пицца "Пепперони"<button data-id='Пицца "Пепперони"' class="good-choose">Выбрать</button></li>
+                    <li>Суши "Филадельфия"<button data-id='Суши "Филадельфия"' class="good-choose">Выбрать</button></li>
+                    <li>Суши "Калифорния"<button data-id='Суши "Калифорния"' class="good-choose">Выбрать</button></li>
+                    <li>"Тирамису"<button data-id='"Тирамису"' class="good-choose">Выбрать</button></li>
+                    <li>"Чизкейк"<button data-id='"Чизкейк"' class="good-choose">Выбрать</button></li>
+                </ul>
+            </div>
+            <div class="order">
+                <h2 class="title">Ваше имя:</h2>
+                <input type="text" name="name" id="clientName">
+                <h2 class="title">Выбранное:</h2>
+                <div id="order-box">
+
+                </div>
+                <ul id="clientChoice" class="client-order"></ul>
+                <button id="order" class="button-to-order">Сделать заказ</button>
+            </div>
+        </section>
+        <section id="restSystem" class="restaurant-system">
+            <div id="orderBox" class="order-in-restaurant">
+                <h2 class="heading">Заказы</h2>
+                <ul id="restSystemOrders"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>    
+</body>
+</html>
