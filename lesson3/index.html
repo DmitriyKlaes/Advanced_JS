@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="script.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <h1>Новости</h1>
+        <article id="news" class="news">
+
+        </article>
+        <button id="load">Загрузить новости</button>
+    </section>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+            padding: 20px;
+        }
+
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d1d1d1;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <h1>Создайте свой мебельный гарнитур</h1>
+
+        <div class="furniture-option">
+            <h2>Стол</h2>
+            <label>
+                Цвет:
+                <select id="tableColor">
+                    <option value="brown">Коричневый</option>
+                    <option value="white">Белый</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="furniture-option">
+            <h2>Стул</h2>
+            <label>
+                Материал:
+                <select id="chairMaterial">
+                    <option value="wood">Дерево</option>
+                    <option value="metal">Металл</option>
+                </select>
+            </label>
+        </div>
+
+        <button id="saveBtn">Сохранить комплект</button>
+        <button id="loadBtn">Загрузить последний комплект</button>
+        <button id="clearBtn">Очистить настройки</button>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    </body>
+
+</html>
