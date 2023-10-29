@@ -5,6 +5,42 @@
 // Реализуйте метод withdraw(amount), который позволит снимать средства со счета. Убедитесь, что сумма для снятия неотрицательная и что на счете достаточно средств; в противном случае выбрасывайте ошибку.
 // Реализуйте конструктор, который принимает начальный баланс в качестве аргумента.Убедитесь, что начальный баланс не отрицательный; в противном случае выбрасывайте ошибку.*/
 
+// я делал :
+// class BankAccount {
+//   // Приватное свойство для хранения баланса
+//   #balance = 0;
+//   // Геттер для получения текущего баланса
+//   get getBalance() {
+//     return this.#balance;
+//   }
+//   // Метод для внесения денег на счет
+//   deposit(amount) {
+//     if (amount < 0) throw new Error('Операция невозможна');
+//     else this.#balance += amount;
+//   }
+//   // withdraw(amount) Метод для снятия денег со счета
+//   withdraw(amount) {
+//     if (this.#balance < amount) throw new Error('Операция невозможна');
+//     else this.#balance -= amount;
+//   }
+//   // constructor(initialBalance) Конструктор для инициализации начального баланса
+//   constructor(initialBalance) {
+//     if (initialBalance < 0) throw new Error('Операция невозможна');
+//     this.#balance = initialBalance;
+//   }
+// }
+
+// // Создаем новый банковский счет с начальным балансом 500
+// let account = new BankAccount(500);
+// console.log(account.getBalance); // Выводит: 500
+
+// account.deposit(200);
+// console.log(account.getBalance); // Выводит: 700
+
+// account.withdraw(100);
+// console.log(account.getBalance); // Выводит: 600
+
+// одногруппники делали:
 // class BankAccount {
 //     // Приватное свойство для хранения баланса
 //     _name = '';
@@ -42,6 +78,8 @@
 
 // account.withdraw(100);
 // console.log(account.balance); // Выводит: 600
+
+
 // /*
 // У вас есть базовый список пользователей.Некоторые из них имеют информацию о своем премиум - аккаунте, а некоторые – нет.
 // Ваша задача – создать структуру классов для этих пользователей и функцию для получения информации о наличии премиум - аккаунта, используя Опциональную цепочку вызовов методов, оператор нулевого слияния и instanceof.
@@ -51,6 +89,37 @@
 // В функции getAccountInfo используйте instanceof для проверки типа переданного пользователя и дайте соответствующий ответ.
 // */
 
+// я делал:
+class User {
+  constructor(name, surname) {
+    this.name = name;
+    this.surname = surname;
+  }
+}
+
+class PremiumUser extends User {
+  premiumAccount = new Date().setFullYear(new Date().getFullYear() + 1); // Пример: установите срок действия на год вперед
+}
+
+// создать RegularUser
+class RegularUser extends User {  
+}
+
+function getAccountInfo(user) {
+  if (user instanceof PremiumUser) {
+    return console.log("Это премиум пользователь");;
+  } else {
+    console.log("Это обычный пользователь");
+  }
+// Премиум аккаунт действителен до такой-то даты или информация отсутствует
+
+// пользователь без премиум аккаунта
+// Тип пользователя не определен"
+}
+
+// Проверка
+
+// коллеги делали:
 // // class User {
 // //     _name;
 // //     _surname;
